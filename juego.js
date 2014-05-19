@@ -127,23 +127,6 @@
 
 	//Creamos una funcion que agrupe nuestros escuchadores para manejarlos de forma mas sencilla.
 	function activarEscuchadores(){
-		//Creamos un evento escuchador que nos devuelve la posicion del raton.
-		document.addEventListener('mousemove',function(evt){
-			mousex=evt.pageX-canvas.offsetLeft;
-			mousey=evt.pageY-canvas.offsetTop;
-		},false);
-
-		//Creamos un evento que escucha las pulsaciones del raton y guarda la ultima tecla presionada.
-		//En este caso creamos la escucha en el canvas para que no tenga en cuenta las pulsaciones echas fuera.
-		canvas.addEventListener('mousedown',function(evt){
-			evt.preventDefault();
-			ultimaPulsacion=evt.which;
-		},false);
-
-		//Evento que detecta cuando dejamos de pulsar el raton.
-		document.addEventListener('mouseup',function(evt){
-			ultimaLiberacion=evt.which;
-		},false);
 
 		//Evento que escucha el movimiento del dedo sobre la pantalla tactil
 		canvas.addEventListener('touchmove',function(evt){
