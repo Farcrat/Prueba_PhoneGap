@@ -2,7 +2,7 @@
 //definidas con el mismo nombre en 2 scripts diferentes estas entraran en conflicto.
 //Por esa razon podemos encapsular nuestro codigo dentro de una funcion autoejecutable de modo que
 //nuestras variables y objetos seran locales impidiendo la modificacion por parte de otros scripts.
-(function(){
+window.onload =function(){
 	//Le decimos al navegador que no sea permisivo con malas practicas que se hacian antiguamente
 	//y que acepta si no se lo indicamos. De este modo lo reportara como error en la consola javascript.
 	'use strict';
@@ -157,4 +157,4 @@
 		});
 	}
 
-})();//Fin de la funcion auto-ejecutable
+}
